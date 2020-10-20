@@ -12,6 +12,9 @@ Palette governance contract has a effective period which used for caching paramt
 and it's default value is a month. validators can proposer a proposal to modify global<br>
 parameters and it will effective after a month if this proposal passed.
 
+#### Flow chart
+![chart](images/palette_flow_chart.png)
+
 #### Methods
 
 ###### name
