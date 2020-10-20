@@ -45,7 +45,7 @@ function getAllValidators() public returns (list address[])
 
 ###### stake
 Return the staking result. fans can delegate some validator to staking PLT token. <br>
-if validator address is the same with the tx sender, it means validator staking by itself. <br>
+if validator address is the same with the tx sender, it means that validator staking by itself. <br>
 if `revoke` = true, the staking amount will transfer back to tx sender. 
 
 ```dtd
