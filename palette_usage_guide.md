@@ -132,7 +132,7 @@ static-nodes.json
 	"enode://593e50007dc00ae9756f74d2d715b11b6f806d9fe8832353bca111b00cbed42ebc38fcc2a3e382c9f28f0fda6dc304633b050855950c21687b2d4cbff11792c0@0.0.0.0:30303?discport=0"
 ]
 ```
-modity ip address and port.
+modify ip address and port.
 
 #### Start up network
 create and start up nodes as follow, nodes number should equal or more than 5:
