@@ -1,7 +1,7 @@
 ## Governance interfaces
 
 #### Simple Summary
-A standard interface for Palette chain native contracts, including 4 part as follow:
+A standard interface for governance native contract of Palette chain, including 4 part as follow:
 
 * Validators manage
 * Proposal and voting
