@@ -184,7 +184,7 @@ cd yournodeDir
 PRIVATE_CONFIG=ignore geth \
 --datadir data \
 --syncmode full --verbosity 3 \
---networkid 100 \
+--networkid 10 \
 --rpcapi db,eth,debug,net,shh,txpool,personal,web3,quorum,istanbul \
 --rpcaddr 0.0.0.0 \
 --rpcport yourRPCPort \
