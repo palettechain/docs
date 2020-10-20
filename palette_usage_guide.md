@@ -176,13 +176,15 @@ Create and start a new node as in the previous steps
 Wating for the admin account add the new node as validator.
 
 #### Start sync node
-Same instructions as `Start up network` excluding step 3 which proposes the node as validator.
+Same instructions as `Start up network` excluding step 3 which proposes the node as validator.<br>
+Select a node from static-nodes.json file as this sync node's boot node.
 
 ```bash
 cd yournodeDir
 
 PRIVATE_CONFIG=ignore geth \
 --datadir data \
+--bootnodes enode://44******b6@127.0.0.1:30300 \
 --syncmode full --verbosity 3 \
 --networkid 10 \
 --rpcapi db,eth,debug,net,shh,txpool,personal,web3,quorum,istanbul \
