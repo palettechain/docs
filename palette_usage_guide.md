@@ -54,13 +54,13 @@ validators
 {
 	"Address": "0x4c3023d9d49147bf8a52d22d526591d38f9c2104",
 	"Nodekey": "69d3cbddf4d473443854840196701b1b815d4f1b3b9e3d916206acf9f6fbd9d6",
-	"NodeInfo": "enode://d13bf4821b4459d77caaf22e352522750667a440a23946f96c58b150127c0313c228224003016f8c84adbf88576e46b3504ffd9f4f9d84a3de5958ec3d4067f4@0.0.0.0:30303?discport=0"
+	"NodeInfo": "enode://d13bf4821b4459d77caaf22e352522750667a440a23946f96c58b150127c0313c228224003016f8c84adbf88576e46b3504ffd9f4f9d84a3de5958ec3d4067f4@127.0.0.1:30303?discport=0"
 }
 ......
 {
 	"Address": "0x69a28ca167bbf3e8ff8028e4c520f67619173dea",
 	"Nodekey": "a4d01e1ab0d46cdaf6c36669ee0e34a56435ea5b033f51654804cc76b5c6f2ad",
-	"NodeInfo": "enode://593e50007dc00ae9756f74d2d715b11b6f806d9fe8832353bca111b00cbed42ebc38fcc2a3e382c9f28f0fda6dc304633b050855950c21687b2d4cbff11792c0@0.0.0.0:30303?discport=0"
+	"NodeInfo": "enode://593e50007dc00ae9756f74d2d715b11b6f806d9fe8832353bca111b00cbed42ebc38fcc2a3e382c9f28f0fda6dc304633b050855950c21687b2d4cbff11792c0@127.0.0.1:30303?discport=0"
 }
 ```
 
@@ -125,11 +125,11 @@ add `admin` address in this file, `admin` account used to manage validators.
 ```dtd
 static-nodes.json
 [
-	"enode://d13bf4821b4459d77caaf22e352522750667a440a23946f96c58b150127c0313c228224003016f8c84adbf88576e46b3504ffd9f4f9d84a3de5958ec3d4067f4@0.0.0.0:30303?discport=0",
-	"enode://e1e704443098036e4a85a317229fb89be0fc8875c01a9edfd15ee38923f960bdcde565bb9b1d9ae7ea85f677fc9fdc0d13e019690ff3bc7ee39a3453985073cf@0.0.0.0:30303?discport=0",
-	"enode://6c35bd37f21b9706b3a889a418dec1c3b8debae0d66c555c61d484dd97a4ab8645cabb703a790ba1c220558788c620b913dd05c2e96aafdbe3b9096f421dcded@0.0.0.0:30303?discport=0",
-	"enode://7dde2a3b57d3c91860f634ac7070910027ef7bfd0b9a90100694c00be3b92d8dbf62dfb550d11005ed6c7b718fcee1015e3e07178a42fdec8001ba24f7d4b5ec@0.0.0.0:30303?discport=0",
-	"enode://593e50007dc00ae9756f74d2d715b11b6f806d9fe8832353bca111b00cbed42ebc38fcc2a3e382c9f28f0fda6dc304633b050855950c21687b2d4cbff11792c0@0.0.0.0:30303?discport=0"
+	"enode://d13bf4821b4459d77caaf22e352522750667a440a23946f96c58b150127c0313c228224003016f8c84adbf88576e46b3504ffd9f4f9d84a3de5958ec3d4067f4@127.0.0.1:30303?discport=0",
+	"enode://e1e704443098036e4a85a317229fb89be0fc8875c01a9edfd15ee38923f960bdcde565bb9b1d9ae7ea85f677fc9fdc0d13e019690ff3bc7ee39a3453985073cf@127.0.0.1:30303?discport=0",
+	"enode://6c35bd37f21b9706b3a889a418dec1c3b8debae0d66c555c61d484dd97a4ab8645cabb703a790ba1c220558788c620b913dd05c2e96aafdbe3b9096f421dcded@127.0.0.1:30303?discport=0",
+	"enode://7dde2a3b57d3c91860f634ac7070910027ef7bfd0b9a90100694c00be3b92d8dbf62dfb550d11005ed6c7b718fcee1015e3e07178a42fdec8001ba24f7d4b5ec@127.0.0.1:30303?discport=0",
+	"enode://593e50007dc00ae9756f74d2d715b11b6f806d9fe8832353bca111b00cbed42ebc38fcc2a3e382c9f28f0fda6dc304633b050855950c21687b2d4cbff11792c0@127.0.0.1:30303?discport=0"
 ]
 ```
 modify ip address and port.
@@ -162,7 +162,7 @@ PRIVATE_CONFIG=ignore nohup geth \
 --mine --minerthreads 1 \
 --verbosity 5 \
 --networkid 10 \
---rpc --rpcaddr 0.0.0.0 --rpcport 22000 \
+--rpc --rpcaddr 127.0.0.1 --rpcport 22000 \
 --rpcapi admin,db,eth,debug,miner,net,shh,txpool,personal,web3,quorum,istanbul \
 --emitcheckpoints \
 --port 30300 2>>node.log &
@@ -188,7 +188,7 @@ PRIVATE_CONFIG=ignore geth \
 --syncmode full --verbosity 3 \
 --networkid 10 \
 --rpcapi db,eth,debug,net,shh,txpool,personal,web3,quorum,istanbul \
---rpcaddr 0.0.0.0 \
+--rpcaddr 127.0.0.1 \
 --rpcport yourRPCPort \
 --port yourP2PPort \
 ```
