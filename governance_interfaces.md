@@ -9,8 +9,8 @@ A standard interface for Palette chain native contracts, including 4 part as fol
 * Reward
 
 Palette governance contract has a effective period which used for caching paramters.<br>
-and it's default value is 10block. validators can proposer a proposal to modify global<br>
-parameters and it will effective after 10 blocks if this proposal passed.
+and it's default value is a month. validators can proposer a proposal to modify global<br>
+parameters and it will effective after a month if this proposal passed.
 
 #### Methods
 
@@ -83,8 +83,9 @@ const (
     ProposalTypeMinStakeAmount  = 1 // mininum staking amount, default value is 0
     ProposalTypeMintPrice       = 2 // NFT token mint price, default value is 0    
     ProposalTypeGasFee          = 3 // NFT token deploy gas fee, default value is 0
-    ProposalTypeRewardFactor    = 4 // reward base factor, default value is 2000, this value in range <br>
-                                    // of (0, 10000), cann't be 0.  and it will convert to float number which <br> // accurate to 2 decimals bits in contract, e.g: 34.02% -> big.NewInt(3402)
+    ProposalTypeRewardFactor    = 4 // reward base factor, default value is 2000, this value in range
+                                    // of (0, 10000), cann't be 0.  and it will convert to float number which
+                                    // accurate to 2 decimals bits in contract, e.g: 34.02% -> big.NewInt(3402)
     ProposalTypeRewardPeriod    = 5 // reward period, default value is one month.
 )
 ```
