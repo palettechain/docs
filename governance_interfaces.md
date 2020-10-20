@@ -9,7 +9,7 @@ A standard interface for governance native contract of Palette chain, including 
 * Reward
 
 Palette governance contract has a effective period which used for caching paramters.<br>
-and it's default value is a month. validators can proposer a proposal to modify global<br>
+and it's default value is a month. validators can propose a proposal to modify global<br>
 parameters and it will effective after a month if this proposal passed.
 
 #### Flow chart
@@ -24,9 +24,9 @@ function name() public view returns (string)
 ```
 
 ###### addValidator
-Return the result of adding action.
+Return the result of add a validator. this transaction sender MUST be `admin` account.
 
-NOTE: the param `revoke` is false denote delete the validator.
+NOTE: the param `revoke`=false, denote to delete the validator.
 
 ```dtd
 function addValidator(validator address, revoke bool) public returns (bool success)
