@@ -1,0 +1,29 @@
+[
+    {
+        "type":"function",
+        "constant":true,
+        "name":"Deploy",
+        "inputs":[
+            {
+                "name":"_name",
+                "type":"string"
+            },
+            {
+                "name":"_symbol",
+                "type":"string"
+            },
+            {
+                "name":"_owner",
+                "type":"address"
+            }
+        ],
+        "outputs":[
+            {
+                "name":"_nft",
+                "type":"address"
+            }
+        ],
+        "payable":false,
+        "stateMutability":"nonpayable"
+    }
+]
