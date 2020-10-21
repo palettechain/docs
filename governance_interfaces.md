@@ -13,7 +13,7 @@ and it's default value is a month. validators can propose a proposal to modify g
 parameters and it will effective after a month if this proposal passed.
 
 #### Flow chart
-![chart](images/palette_flow_chart.png)
+![chart](images/governance_flow_chart.png)
 
 #### Methods
 
