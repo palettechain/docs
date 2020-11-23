@@ -25,6 +25,10 @@
                 "type":"address"
             },
             {
+                "name":"stakeAccount",
+                "type":"address"
+            },
+            {
                 "name":"revoke",
                 "type":"bool"
             }
@@ -67,10 +71,31 @@
     {
         "type":"function",
         "constant":true,
+        "name":"checkValidator",
+        "inputs":[
+            {
+                "name":"validator",
+                "type":"address"
+            }
+        ],
+        "outputs":[
+            {
+                "name":"succeed",
+                "type":"bool"
+            }
+        ]
+    },
+    {
+        "type":"function",
+        "constant":true,
         "name":"stake",
         "inputs":[
             {
                 "name":"validator",
+                "type":"address"
+            },
+            {
+                "name":"stakeAccount",
                 "type":"address"
             },
             {
@@ -107,6 +132,23 @@
             {
                 "name":"amount",
                 "type":"uint256"
+            }
+        ]
+    },
+    {
+        "type":"function",
+        "constant":true,
+        "name":"getStakeAccount",
+        "inputs":[
+            {
+                "name":"validator",
+                "type":"address"
+            }
+        ],
+        "outputs":[
+            {
+                "name":"account",
+                "type":"address"
             }
         ]
     },
@@ -188,6 +230,10 @@
             {
                 "name":"endBlock",
                 "type":"uint256"
+            },
+            {
+                "name":"passed",
+                "type":"bool"
             }
         ]
     },
@@ -199,10 +245,6 @@
             {
                 "name":"proposalId",
                 "type":"address"
-            },
-            {
-                "name":"revoke",
-                "type":"bool"
             }
         ],
         "outputs":[
@@ -240,10 +282,6 @@
             }
         ],
         "outputs":[
-            {
-                "name":"proposalType",
-                "type":"uint8"
-            },
             {
                 "name":"value",
                 "type":"uint256"
@@ -285,13 +323,32 @@
         ]
     },
     {
+        "type":"function",
+        "constant":true,
+        "name":"getLastRewardBlockHeight",
+        "inputs":[
+
+        ],
+        "outputs":[
+            {
+                "name":"value",
+                "type":"uint256"
+            }
+        ]
+    },
+    {
         "type":"event",
         "anonymous":false,
         "name":"addValidator",
         "inputs":[
             {
-                "indexed":false,
+                "indexed":true,
                 "name":"validator",
+                "type":"address"
+            },
+            {
+                "indexed":true,
+                "name":"stakeAccount",
                 "type":"address"
             },
             {
@@ -314,6 +371,11 @@
             {
                 "indexed":true,
                 "name":"validator",
+                "type":"address"
+            },
+            {
+                "indexed":true,
+                "name":"stakeAccount",
                 "type":"address"
             },
             {
@@ -382,7 +444,7 @@
             },
             {
                 "indexed":false,
-                "name":"revoke",
+                "name":"passed",
                 "type":"bool"
             }
         ]
@@ -400,18 +462,6 @@
             {
                 "indexed":false,
                 "name":"factor",
-                "type":"uint256"
-            }
-        ]
-    },
-    {
-        "type":"event",
-        "anonymous":false,
-        "name":"reward",
-        "inputs":[
-            {
-                "indexed":false,
-                "name":"amount",
                 "type":"uint256"
             }
         ]
