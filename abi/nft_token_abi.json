@@ -432,6 +432,41 @@
         "stateMutability":"view"
     },
     {
+        "type":"function",
+        "constant":true,
+        "name":"BaseUri",
+        "inputs":[
+
+        ],
+        "outputs":[
+            {
+                "name":"_uri",
+                "type":"string"
+            }
+        ],
+        "payable":false,
+        "stateMutability":"view"
+    },
+    {
+        "type":"function",
+        "constant":true,
+        "name":"SetBaseUri",
+        "inputs":[
+            {
+                "name":"_uri",
+                "type":"string"
+            }
+        ],
+        "outputs":[
+            {
+                "name":"_result",
+                "type":"bool"
+            }
+        ],
+        "payable":false,
+        "stateMutability":"nonpayable"
+    },
+    {
         "type":"event",
         "anonymous":false,
         "name":"transfer",
